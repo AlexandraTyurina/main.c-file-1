@@ -81,14 +81,13 @@ int main()
                 p=p->next;
             }
         }
-//очистка списка, головы и дополнительного указателя
+//cleaning the list, head and additional pointer
         p=p0->first;
         while(p!=NULL)
         {
             p1=p->next;
             ClearStructure(p->comp);
             free(p);
-            p=NULL;
             p=p1;
         }
         if(p0)
@@ -101,7 +100,7 @@ int main()
     if ((choice==1)&&(df))
     {
         p0=MakeHead();
-        g1=CreateNode2(df); /* создание элемента списка */
+        g1=CreateNode2(df); 
         AddFirst2(p0,g1);
         g=p0->first;
         for (i=0; i<(n-2); i++)
@@ -243,7 +242,7 @@ int main()
         }
         else
             printf ("There aren't any matching values!");
-        //очистка списка, головы и дополнительного указателя
+        //cleaning the list, head and additional pointer
         g=p0->first;
         while(g!=NULL)
         {
@@ -258,7 +257,7 @@ int main()
     if ((choice==2)&&(df))
     {
         p0=MakeHead();
-        g1=CreateNode2(df); /* создание элемента списка */
+        g1=CreateNode2(df); 
         AddFirst2(p0,g1);
         g=p0->first;
         for (i=0; i<(n-2); i++)
@@ -293,7 +292,7 @@ int main()
             g=g->next;
         }
         while(g!=p0->first);
-//очистка списка, головы и дополнительного указателя
+//cleaning the list, head and additional pointer
         g=p0->first;
         g=g->next;
         while(g->prev!=p0->last)
